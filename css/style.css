@@ -13,6 +13,31 @@ body {
   font-style: normal;
 }
 
+/* self start */
+
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+  margin-bottom: 50px;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.details_info{
+  padding: 10px;
+}
+
+
+/* self end */
+
+
 /* line 12, ../../Arafath/CL/December/230. Portfolio/HTML/scss/theme-default.scss */
 .img {
   max-width: 100%;
@@ -685,11 +710,6 @@ h3 {
   position: relative;
   z-index: 0;
   padding-bottom: 15px;
-}
-
-.newtest{
-  margin-top: 50px;
-  margin-left: 20px;
 }
 
 @media (max-width: 767px) {
@@ -2049,20 +2069,6 @@ h3 {
   .about_wrap_area .about_info_wrap .single_info {
     margin-bottom: 30px;
   }
-}
-
-.iframe-container{
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; 
-  height: 0;
-}
-.iframe-container iframe{
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 /* line 95, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
