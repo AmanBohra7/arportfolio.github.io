@@ -15,9 +15,14 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/default.min.css">
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/default.min.css">
 	<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/docco.min.css">
+
+
+
+
     <title>WebinAR</title>
   </head>
   <body>
@@ -31,10 +36,14 @@
         Realtime webpage generator from AR
       </h1>
       <p>
-        An android application that provides you a web panel in Augmented Reality(AR) through 
+        You might have come across various ads on the internet claiming to make web development easy. Well, in this project I made it 
+        a lot easier. You get to develop your own website using AR, which makes it simple, visual and interactive.
+
+        <!-- An android application that provides you a web panel in Augmented Reality(AR) through 
         which you can design a web page in that AR experience only using some Bootstrap 
         component and colors and submit it, then your entire design will be converted into an 
-        HTML code using React framework. <br />
+        HTML code using React framework. <br /> -->
+        <br />
         <br />
         The main features the application are : <br />
         - Create a unique design using the application and generate your HTML page.  <br />
@@ -62,17 +71,43 @@
 
     <div class="sample_code section">
       <div class="sample_code_info">
-        <h1>Sample Code Generated</h1>
+        <h1>Sample Generated Code</h1>
         <p>
-          Provided image is the sample HTML code generated through a test run of the WebinAR
+          Provided code is the sample HTML code generated through a test run of the WebinAR
           application.
         </p>
       </div>
       <div class="codesection">
-        <pre><code class="html">
-            &#60;html lang="en-GB"&#62; &#60;br/&#62; &#60;head&#62;&#60;br/&#62; &#60;title&#62;Home&#60;/title&#62;&#60;br/&#62; &#60;meta charset="utf-8"&#62;&#60;br/&#62;
-             &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;&#60;br/&#62; &#60;link rel="stylesheet" type="text/css" href="main.css"&#62;&#60;br/&#62; &#60;/head&#62;&#60;br/&#62; &#60;body&#62; &#60;h1&#62;My nature and wildlife blog&#60;/h1&#62; &#60;img src="tree.jpg" alt="Tree" class="photo"/&#62; &#60;/body&#62; &#60;/html&#62;
-            </code></pre>
+        <pre><code class="test">
+          &#60;div id="root"&#62;
+            &#60;nav class="navbar navbar-light " style="background-color: rgb(225, 177, 44);"&#62;
+              &#60;a class="navbar-brand"&#62;NavBar&#60;/a&#62;
+            &#60;/nav&#62;
+              &#60;div class=""&#62;
+                  &#60;h1 class="row p-5 justify-content-around"&#62;This is heading&#60;/h1&#62;
+                  &#60;div class="row p-5 justify-content-around"&#62;
+                      &#60;div class="card col-4" style="width: 10rem;"&#62;
+                          &#60;img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/webdesign-3411373_960_720.jpg" class="card-img-top" alt="..."&#62;
+                          &#60;div class="card-body"&#62;
+                              &#60;h5 class="card-title"&#62;Card title&#60;/h5&#62;
+                              &#60;p class="card-text"&#62;Some quick example text to build on the card title and make up the bulk of the card's content.&#60;/p&#62;
+                              &#60;a class="btn btn-primary"&#62;Go somewhere&#60;/a&#62;
+                          &#60;/div&#62;
+                      &#60;/div&#62;
+                      &#60;div class="card col-4" style="width: 10rem;"&#62;
+                          &#60;img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/webdesign-3411373_960_720.jpg" class="card-img-top" alt="..."&#62;
+                          &#60;div class="card-body"&#62;
+                              &#60;h5 class="card-title"&#62;Card title&#60;/h5&#62;
+                              &#60;p class="card-text"&#62;Some quick example text to build on the card title and make up the bulk of the card's content.&#60;/p&#62;
+                              &#60;a class="btn btn-primary"&#62;Go somewhere&#60;/a&#62;
+                          &#60;/div&#62;
+                      &#60;/div&#62;
+                  &#60;/div&#62;
+              &#60;/div&#62;
+            &#60;footer class="footer text-center" style="background-color: rgb(64, 115, 158);"&#62;This is Footer!&#60;/footer&#62;
+          &#60;/div&#62;
+
+        </code></pre>
     </div>
       <!-- <div class="engage_image"></div> -->
     </div>
@@ -87,6 +122,26 @@
     
     <div class="uielements section">
         <h1>UI Elements</h1>
+        <div class="imagegrid">
+          <div class="box1">
+            <img src="./images/feature_webinar/Gif/ColorPanel.gif" alt="" srcset="">
+          </div>
+          <div class="box2">
+            <img src="./images/feature_webinar/Gif/CardSelect.gif">
+          </div>
+          <div class="box3">
+            <img src="./images/feature_webinar/Gif/Saving.gif" alt="">
+          </div>
+          <div class="box4">
+            <img src="./images/feature_webinar/Gif/Complete.gif" alt="" srcset="">
+          </div>
+          <div class="box5">
+            <img src="./images/feature_webinar/Gif/Options.gif" alt="" srcset="">
+          </div>
+          <div class="box6">
+            <img src="./images/feature_webinar/Gif/SplitPanel.gif" alt="" srcset="">
+          </div>
+        </div>
     </div>
 
     <!-- Tech section! -->
@@ -122,10 +177,11 @@
     <div class="contributions section">
       <h1>Future Scope</h1>
       <p>
-        I have developed a small section of a concept, which can be a next big thing in web and Augmented Reality. AR have that capabilites
-        to change the way of designing and developing. AR is next big revolutionary change in Human Computer Interaction (HCI) and i have 
-        tried my own concept and tried to prototype a AR concept integrated with web developed. As a futrue perspective this application can 
-        be used as a full set architecture for desging and developing web pages using latest tech like Augmented Reality.
+        I have developed a small section of the concept, which can be a next big thing in web and Augmented Reality. 
+        AR has the capability to change the way of designing and developing. AR is the next big revolutionary change in Human Computer 
+        Interaction (HCI).I have tried my own concept and tried to prototype a AR concept integrated with web development. As a future 
+        perspective this application can be used as a full set architecture for designing and developing web pages using latest tech like 
+        Augmented Reality.
       </p>
     </div>
 
@@ -153,6 +209,7 @@
     </footer>
 
 
-    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
