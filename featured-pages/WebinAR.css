@@ -1,0 +1,420 @@
+*{
+    padding:0px;
+    margin: 0px;
+    background-color: F0F0F0;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+h1{
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+}
+
+li{
+    list-style-type: none;
+}
+
+.section{
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+#demo_video{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1280px;
+}
+
+.test{
+    background-color: #444;
+}
+
+
+
+
+/* Landing start */
+
+.heading_image{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.heading_image h1{
+    position: absolute;
+    top:50px;
+    color: white;
+    background: none;
+    margin-left: 10px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.heading_image span{
+    background: none;
+    font-size: .6em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.bg_image{
+    background-image: url("./images/feature_webinar/webinar_landing.png");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+/* Landing End */
+
+
+/* Heading section start */
+
+.heading{
+    color: white;
+    padding:10px;
+    margin-top: 90px !important;
+    margin-bottom: 50px !important;
+}
+
+.heading p{
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+}
+
+/* Heading section end */
+
+
+/* intro video section start */
+
+.into_vedio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding:20px; */
+}
+
+/* intro video section end */
+
+
+/* contributions section start */
+
+.contributions{
+    color: white;
+    padding:10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* contributions section end */
+
+
+/* sample_code section start */
+
+.sample_code{
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sample_code *{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.sample_code img{
+    width: 100%;
+    height: 100%;
+}
+
+.codesection{
+    width: 100%;
+    height: fit-content;
+}
+
+
+/* sample_code section end */
+
+
+/* Architechture section start*/
+
+.architechture{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.architechture img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Architechture section end*/
+
+
+/* tech start */
+
+.tech{
+    color: white;
+}
+
+.tech_image{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tech_image div{
+    margin-top: 30px;
+}
+
+.tech_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech_id{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tech end */
+
+
+
+/* Thanku section start */
+
+.thank_you{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* font-size: 60px; */
+    color: white;
+    /* padding: 50px; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* padding: 10px; */
+}
+
+.thank_you a{
+    color: #137ECF;
+}
+
+/* Thanku section end */
+
+
+/* Footer start */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    /* padding: 40px; */
+    /* background-color: red; */
+}
+
+.left{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.right{
+    color: white;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+.icons img{
+    border-radius: 0%;
+}
+
+
+.left *{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: flex;
+}
+
+.right *{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* footer end */
+
+
+/* UI Elements START */
+
+.uielements{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+  
+.imagegrid > div{
+    /* background: #eee; */
+    /* border: 2px solid black; */
+    /*   padding:1em; */
+}
+
+
+
+.imagegrid{
+    align-self: center;
+    width: 100%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap:.2em;
+    grid-auto-rows:minmax(auto,231px);
+}
+
+.imagegrid img{
+    width: 100%;
+    height: 100%;
+}
+
+.imagegrid video{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* UI Elements END */
+
+@media screen and (min-width: 768px){
+    .section{
+        max-width: 1280px;
+    }
+
+    .heading{
+        margin-top: 40px;
+    }
+
+    
+    .tech_image{
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .tech_image{
+        justify-content: space-between;
+    }
+
+    .thank_you h1{
+        width: 50%;
+        text-align: center;
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+        /* padding-left: 10px;
+        padding-right: 10px; */
+    }
+
+    .left{
+        margin-left: 20px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left p{
+        margin-left: 10px;
+    }
+
+    .right{
+        margin-right: 20px;
+    }
+
+    #ss_side{
+        /* max-width: 900px; */
+        max-width: 100%;
+        max-height: 540px;
+        margin-left: 34px;
+    }
+
+    /* #ss_middle{
+        margin-left: 34px;
+        margin-right: 34px;
+    } */
+
+
+    #ss{
+        max-width: 100%;
+        max-height: 540px;
+    }
+
+    .imagegrid{
+        grid-template-columns: 1f;
+        align-self: center;
+        max-width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 1239px) {
+    .imagegrid{
+        min-width: 100%;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows:minmax(auto,231px);
+    }
+
+    .box1{
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
+    .box2{
+        grid-column: 3;
+        grid-row: 1/2;
+    }
+
+    .box6{
+        grid-row: 3/5;
+        grid-column: 2/4;
+    }
+
+    .imagegrid img{
+        width: 100%;
+        height: 100%;
+    }
+
+}
