@@ -72,15 +72,16 @@
                         <div class="article-size">
                             <div class="rich-text margin-bottom-5em w-richtext">
                                 <h2>Introducing PoolXR</h2>
-                                <p><strong>PoolXR is a mixed reality-based project that uses custom-trained object detection (for cue and game balls) along with the new Meta Passthrough Camera API. It brings the classic game of pool to life by infusing it with virtual information and guidance, combining real-world interaction with virtual elements, natural hand gestures, and intuitive gameplay.</strong></p>
-                                <p>I’ve created an immersive experience where players can scan their pool table and anchor the ball positions in world space. This helps the shot prediction system become more accurate and real-time, providing direction and angle information through an overlay UI. The Passthrough Camera API allows seamless integration between the real and virtual worlds, making the game feel natural and engaging.</p>
-                                <h3>Key Features</h3>
-                                <p>My innovative approach to mixed reality pool gaming includes several groundbreaking features:</p>
+                                <p>PoolXR is a mixed reality-based project that uses custom-trained object detection (for cue and game balls) along with the new Meta Passthrough Camera API. It brings the classic game of pool to life by infusing it with virtual information and guidance, combining real-world interaction with virtual elements,</p>
+                                <!-- <p>I’ve created an immersive experience where players can scan their pool table and anchor the ball positions in world space. This helps the shot prediction system become more accurate and real-time, providing direction and angle information through an overlay UI. The Passthrough Camera API allows seamless integration between the real and virtual worlds, making the game feel natural and engaging.</p> -->
+                                <h3>Behind the Cue: How Shot Prediction Works</h3>
+                                <!-- <p>The experience is based on a single pool game ball and a cue ball. The steps in video are detailed here.</p> -->
                                 <ul role="list">
-                                    <li>Real-time camera passthrough for natural interaction with the physical environment</li>
-                                    <li>Advanced physics simulation for realistic ball movement and collisions</li>
-                                    <li>Intuitive controls that mimic real pool cue movements</li>
-                                    <li>Multiplayer support for competitive gameplay</li>
+                                    <li><strong>Detecting balls:</strong> I used a custom-trained YOLOv11 model, deployed as a Sentis model in Unity3D, to detect both the cue ball and the target game ball in 2D space on the pool table.</li>
+                                    <li><strong>Ball locked:</strong> Once we acquire the 2D coordinates of the balls, we convert them into world space positions and anchor them in place. From this point forward, we no longer need to track their movement.</li>
+                                    <li><strong>Choose pocket:</strong> After the ball positions are anchored in world space, the player is prompted to choose a pocket. This selection is used in the upcoming shot prediction phase.</li>
+                                    <li><strong>Evaluating shot:</strong> With all three key positions (cue ball, target ball, and selected pocket) defined, we use a combination of pool physics calculations and Unity's physics engine to simulate the optimal cut shot. Predicted paths are then visualized with guiding lines. </li>
+                                    <li><strong>Shot Prediction ready:</strong> Once the simulation completes, we display the precise hit point on the target game ball where the cue ball should make contact. This helps the player aim more effectively and increase the chances of sinking the ball. </li>
                                 </ul>
                                 <figure style="max-width:1920pxpx"
                                     class="w-richtext-align-fullwidth w-richtext-figure-type-image">
@@ -110,12 +111,12 @@
                                             loading="lazy" alt="Technical demonstration"></div>
                                 </figure> -->
                                 <h5>Future Development</h5>
-                                <p><strong>I'm constantly pushing the boundaries of what's possible in mixed reality gaming.</strong> My roadmap includes exciting features like:</p>
+                                <p>I'm continuously exploring new ways to push the boundaries of what's possible in mixed reality gaming. Here's a glimpse of what's next on the roadmap for <strong>PoolXR:</strong></p>
                                 <ol start="" role="list">
-                                    <li>Enhanced multiplayer capabilities with cross-platform support</li>
-                                    <li>Advanced physics simulation for more realistic gameplay</li>
-                                    <li>Customizable environments and table designs</li>
-                                    <li>Integration with popular social platforms</li>
+                                    <li><strong>Ball Selection Flow:</strong> Adding support for selecting the target ball before choosing a pocket, making the prediction flow more intuitive and user-controlled.</li>
+                                    <li><strong>Enhanced Shot Evaluation:</strong> Improving the shot evaluation system to be more robust and accurate, including a shot accuracy percentage to help players better understand their chances of success.</li>
+                                    <li><strong>Lower Detection Latency:</strong> Optimizing the performance of the object detection model running on the headset to reduce latency and improve real-time responsiveness.</li>
+                                    <li><strong>Multiplayer Integration:</strong> Introducing multiplayer capabilities to make the experience more immersive and enjoyable with friends or other players.</li>
                                 </ol>
                             </div>
                             <div class="article-about-author">
