@@ -90,7 +90,7 @@
                         <div class="article-size">
                             <div class="rich-text margin-bottom-5em w-richtext">
                                 <h2>Introducing PoolXR</h2>
-                                <p>PoolXR is a mixed reality-based project that uses custom-trained object detection
+                                <p>PoolXR is a mixed reality-based project that uses custom-trained object detection model
                                     (for cue and game balls) along with the new Meta Passthrough Camera API. It brings
                                     the classic game of pool to life by infusing it with virtual information and
                                     guidance, combining real-world interaction with virtual elements,</p>
@@ -120,17 +120,19 @@
                                     <div class="grid-card">
                                         <figure id="figure-grid" style="max-width:1080pxpx"
                                             class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                                            <div><img src="images/61b1e1c8d58dad761cdbc654_pexels-mo-9002742.jpg"
-                                                    loading="lazy" alt="PoolXR in action"></div>
-                                            <figcaption>Earfasdeal-world setup.</figcaption>
+                                            <video class="portolio-webm-grid" autoplay muted loop playsinline
+                                                preload="auto" src="videos/interaction_1.webm" loading="lazy" alt="">
+                                            </video>
+                                            <figcaption>Step 1: Perform the gesture to initiate ball tracking. Using camera access, every 4th–5th frame is passed through the model to track 2D coordinates of the balls in real time.</figcaption>
                                         </figure>
                                     </div>
                                     <div class="grid-card">
                                         <figure id="figure-grid" style="max-width:1080pxpx"
                                             class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                                            <div><img src="images/61b1e1c8d58dad761cdbc654_pexels-mo-9002742.jpg"
-                                                    loading="lazy" alt="PoolXR in action"></div>
-                                            <figcaption>Earfasdeal-world setup.</figcaption>
+                                            <video class="portolio-webm-grid" autoplay muted loop playsinline
+                                                preload="auto" src="videos/interaction_2.webm" loading="lazy" alt="">
+                                            </video>
+                                            <figcaption>Step 2: Once ball tracking is stable, perform the gesture to localize and anchor the real pool table in world space.</figcaption>
                                         </figure>
                                     </div>
                                 </div>
@@ -139,8 +141,7 @@
                                     <video class="portolio-webm-grid" autoplay muted loop playsinline preload="auto"
                                         src="videos/shot_pridiction_720.webm" loading="lazy" alt="">
                                     </video>
-                                    <figcaption>Shot prediction section which envolves calculating angle and follow
-                                        through direction of cue ball once pocket is selected.</figcaption>
+                                    <figcaption>Step 3: Select a pocket to start the shot prediction process, guided by visual line overlays on the real table.</figcaption>
                                 </figure>
 
                                
@@ -153,9 +154,7 @@
                                 </figure> -->
 <br/><br/>
                                 <h4>Inside the Build: Behind the Scenes of PoolXR</h4>
-                                <p>Creating PoolXR was a deep dive into computer vision, spatial anchoring, and mixed
-                                    reality UX. This section gives you a glimpse into how it all came together — from
-                                    early prototypes to real-world testing.</p>
+                                <p>Creating PoolXR was an exciting and rewarding journey — a mix of fun experimentation and deep learning. From the initial idea to training custom models and building the final experience, it took weeks of iteration, problem-solving, and hands-on development. This section offers a behind-the-scenes look at how it all came together — from early concepts to real-world testing.</p>
                                 <!-- <ul role="list">
                                     <li><strong>Seamlessly blends real and virtual elements</strong> for an immersive experience.</li>
                                     <li>Maintains accurate spatial awareness for precise gameplay</li>
@@ -169,9 +168,7 @@
                                             <video class="portolio-webm-grid" autoplay muted loop playsinline
                                                 preload="auto" src="videos/poc_webm.webm" loading="lazy" alt="">
                                             </video>
-                                            <figcaption>Early proof of concept showcasing a custom-trained model
-                                                tracking a
-                                                table tennis ball in a simple real-world setup.</figcaption>
+                                            <figcaption>Early proof of concept showcasing a custom-trained model tracking a table tennis ball in a basic real-world setup.</figcaption>
                                         </figure>
                                     </div>
                                     <div class="grid-card">
@@ -180,24 +177,28 @@
                                             <video class="portolio-webm-grid" autoplay muted loop playsinline
                                                 preload="auto" src="videos/shader.webm" loading="lazy" alt="">
                                             </video>
-                                            <figcaption>Created custom shader for table ripple effect based on cue ball.
+                                            <figcaption>Custom shader experiment that creates a ripple effect on the table surface based on the cue ball’s world space position, anchored accurately to the physical table.
                                             </figcaption>
                                         </figure>
                                     </div>
                                     <div class="grid-card">
                                         <figure id="figure-grid" style="max-width:1080pxpx"
                                             class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                                            <div><img src="images/61b1e1c8d58dad761cdbc654_pexels-mo-9002742.jpg"
-                                                    loading="lazy" alt="PoolXR in action"></div>
-                                            <figcaption>Earfasdeal-world setup.</figcaption>
+                                            <video class="portolio-webm-grid" autoplay muted loop playsinline
+                                                preload="auto" src="videos/data_label.webm" loading="lazy" alt="">
+                                            </video>
+                                            <figcaption>Manually labeled 450+ images to train a custom object detection model for recognizing cue and game balls in various conditions.
+                                            </figcaption>
                                         </figure>
                                     </div>
                                     <div class="grid-card">
                                         <figure id="figure-grid" style="max-width:1080pxpx"
                                             class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                                            <div><img src="images/61b1e1c8d58dad761cdbc654_pexels-mo-9002742.jpg"
-                                                    loading="lazy" alt="PoolXR in action"></div>
-                                            <figcaption>Earfasdeal-world setup.</figcaption>
+                                            <video class="portolio-webm-grid" autoplay muted loop playsinline
+                                                preload="auto" src="videos/opencv_720.mp4" loading="lazy" alt="">
+                                            </video>
+                                            <figcaption>The initial idea was to detect balls using OpenCV — here's the proof of concept. It worked to some extent, but didn’t feel reliable enough for consistent gameplay.
+                                            </figcaption>
                                         </figure>
                                     </div>
 
@@ -229,6 +230,7 @@
                                     <strong>PoolXR:</strong>
                                 </p>
                                 <ol start="" role="list">
+                                    <li><strong>Cue Stick Tracking:</strong> Adding support for real-time cue stick detection to improve aim tracking and shot direction prediction. Once the cue stick angle is detected accurately, we can also estimate shot success percentage based on alignment and positioning.</li>
                                     <li><strong>Ball Selection Flow:</strong> Adding support for selecting the target
                                         ball before choosing a pocket, making the prediction flow more intuitive and
                                         user-controlled.</li>
