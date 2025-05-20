@@ -5,6 +5,22 @@ html {
     height: 100%
 }
 
+.portolio-webm{
+    width: 95%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    /* height: 100%; */
+}
+
+.portolio-webm-grid{
+    width: 100%;
+    height: 100%;
+    /* aspect-ratio: 1; */
+    /* object-fit: fit; */
+    /* height: 100%; */
+}
+
+
 article,
 aside,
 details,
@@ -152,17 +168,39 @@ input::-moz-focus-inner {
 input {
     line-height: normal
 }
+
+#figure-grid{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#name-tag{
+    text-decoration: none;
+}
+
 .project-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(1, 1fr); */
+    gap: 1rem;
+    /* grid-row:; */
+    /* height:; */
+    margin-top: 2rem;
+    padding: 0px;
     margin-bottom: 3rem;
+    /* background-color: red; */
+    /* height: 10rem; */
 }
 .project-grid .grid-card{
-    aspect-ratio: 1;
+    /* aspect-ratio: ; */
     width: 100%;
-    background-color: red;
+    /* background-color: green; */
+    height: fit-content;
+    /* padding: 0; */
+    /* margin: 0; */
+    /* height: auto; */
+    /* background-color: red; */
+    /* height:100%; */
 }
 
 
@@ -887,6 +925,10 @@ textarea.w-select {
     .project-grid{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(1, 1fr);
+        /* background-color: red; */
+    }
+    .grid-card{
+        /* background-color: green; */
     }
 
     .w-hidden-main,
@@ -1795,6 +1837,9 @@ textarea.w-select {
 .w-richtext .w-richtext-figure-selected[data-rt-type=image] div,
 .w-richtext .w-richtext-figure-selected[data-rt-type=video] div:after {
     outline: #2895f7 solid 2px
+
+
+
 }
 
 .w-richtext figure.w-richtext-figure-type-video>div:after,
@@ -7969,7 +8014,9 @@ em {
     margin-bottom: 1.5em;
     background-color: #e9ecef;
     font-size: .8em;
-    line-height: 2.3em
+    line-height: 1.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
 }
 
 .rich-text ul {
@@ -13661,7 +13708,7 @@ em {
     }
 
     .header-3d-images.in-article-page {
-        height: 30em
+        height: 16em
     }
 
     .header-image {
