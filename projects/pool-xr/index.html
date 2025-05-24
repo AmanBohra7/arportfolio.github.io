@@ -92,15 +92,15 @@
                             <div class="rich-text margin-bottom-5em w-richtext">
                                 <h2>Introducing PoolXR</h2>
                                 <p>PoolXR is a mixed reality-based project that uses custom-trained object detection model
-                                    (for cue and game balls) along with the new Meta Passthrough Camera API. It brings
+                                    (for cue and game balls) along with the new Meta <a href="https://developers.meta.com/horizon/documentation/unity/unity-pca-documentation">Passthrough Camera API</a>. It brings
                                     the classic game of pool to life by infusing it with virtual information and
                                     guidance, combining real-world interaction with virtual elements.</p>
                                 <!-- <p>I’ve created an immersive experience where players can scan their pool table and anchor the ball positions in world space. This helps the shot prediction system become more accurate and real-time, providing direction and angle information through an overlay UI. The Passthrough Camera API allows seamless integration between the real and virtual worlds, making the game feel natural and engaging.</p> -->
                                 <h3>Behind the Cue: How Shot Prediction Works</h3>
                                 <!-- <p>The experience is based on a single pool game ball and a cue ball. The steps in video are detailed here.</p> -->
                                 <ul role="list">
-                                    <li><strong>Detecting balls:</strong> I used a custom-trained YOLOv11 model,
-                                        deployed as a Sentis model in Unity3D, to detect both the cue ball and the
+                                    <li><strong>Detecting balls:</strong> I used a custom-trained <a href="https://docs.ultralytics.com/models/yolo11/">YOLO11</a> model,
+                                        deployed as a <a href="https://unity.com/products/sentis">Sentis</a> model in Unity3D, to detect both the cue ball and the
                                         target game ball in 2D space on the pool table.</li>
                                     <li><strong>Ball locked:</strong> Once we acquire the 2D coordinates of the balls,
                                         we convert them into world space positions and anchor them in place. From this
@@ -198,7 +198,7 @@
                                             <video class="portolio-webm-grid" autoplay muted loop playsinline
                                                 preload="auto" src="videos/opencv_720.webm" loading="lazy" alt="">
                                             </video>
-                                            <figcaption>The initial idea was to detect balls using OpenCV — here's the proof of concept. It worked to some extent, but didn’t feel reliable enough for consistent gameplay.
+                                            <figcaption>The initial idea was to detect balls using <a href="https://github.com/opencv/opencv">OpenCV</a> — here's the proof of concept. It worked to some extent, but didn’t feel reliable enough for consistent gameplay.
                                             </figcaption>
                                         </figure>
                                     </div>
