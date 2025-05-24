@@ -41,6 +41,7 @@
 </head>
 <link href="images/fav_icon.png" rel="shortcut icon" type="image/x-icon">
 <link href="images/fav_icon.png" rel="apple-touch-icon">
+
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCQLZBGN" height="0" width="0"
@@ -51,7 +52,7 @@
             <header data-w-id="5b2d019a-462e-0682-5949-dd289194dac8" class="header">
                 <div class="container">
                     <div class="article-header-2">
-                        <h1 class="heading extra-x-large center">AtomicXR: Capture atomic structures to build 3D in MR. 
+                        <h1 class="heading extra-x-large center">AtomicXR: Capture atomic structures to build 3D in MR.
                         </h1>
                         <div class="flex align-center justify-center mob-wrap">
                             <div class="flex align-center flex-margins-1em"><img alt="Aman Bohra" loading="lazy"
@@ -91,61 +92,78 @@
                         <div class="article-size">
                             <div class="rich-text margin-bottom-5em w-richtext">
                                 <h2>Introducing AtomicXR</h2>
-                                <p>PoolXR is a mixed reality-based project that uses custom-trained object detection model
-                                    (for cue and game balls) along with the new Meta Passthrough Camera API. It brings
-                                    the classic game of pool to life by infusing it with virtual information and
-                                    guidance, combining real-world interaction with virtual elements.</p>
-                                <!-- <p>I’ve created an immersive experience where players can scan their pool table and anchor the ball positions in world space. This helps the shot prediction system become more accurate and real-time, providing direction and angle information through an overlay UI. The Passthrough Camera API allows seamless integration between the real and virtual worlds, making the game feel natural and engaging.</p> -->
-                                <h3>Behind the Cue: How Shot Prediction Works</h3>
+                                <p>AtomicXR is a Mixed Reality project that combines the Meta <a
+                                        href="https://developers.meta.com/horizon/documentation/unity/unity-pca-documentation"><a
+                                            href="https://developers.meta.com/horizon/documentation/unity/unity-pca-documentation">Passthrough
+                                            Camera API</a></a>
+                                    with the power of <a href="https://github.com/opencv/opencv">OpenCV</a> for
+                                    real-time image processing. The concept is simple yet
+                                    impactful:
+                                    <strong>Pinch → Capture → Detect → Generate</strong>.
+                                    <br /><br />
+                                    Using a hand gesture (like a pinch and drag), users can capture a sketch or printed
+                                    image of an atomic structure. The system then processes the image to detect and
+                                    analyze the number of electrons or elements using computer vision techniques. Based
+                                    on this detection, a 3D atomic model is generated and visualized right in your
+                                    physical space through Mixed Reality.
+                                    <br /><br />
+                                    This project blends spatial interaction with educational visualization — making
+                                    complex atomic concepts interactive and easier to understand in real time.
+                                </p>
+                                <!-- <p>I’ve created an immersive experience where players can scan their pool table and anchor the ball positions in world space. This helps the shot prediction system become more accurate and real-time, providing direction and angle information through an overlay UI. The <a href="https://developers.meta.com/horizon/documentation/unity/unity-pca-documentation"><a href="https://developers.meta.com/horizon/documentation/unity/unity-pca-documentation">Passthrough Camera API</a></a> allows seamless integration between the real and virtual worlds, making the game feel natural and engaging.</p> -->
+                                <h3>Key Features</h3>
                                 <!-- <p>The experience is based on a single pool game ball and a cue ball. The steps in video are detailed here.</p> -->
                                 <ul role="list">
-                                    <li><strong>Detecting balls:</strong> I used a custom-trained YOLOv11 model,
-                                        deployed as a Sentis model in Unity3D, to detect both the cue ball and the
-                                        target game ball in 2D space on the pool table.</li>
-                                    <li><strong>Ball locked:</strong> Once we acquire the 2D coordinates of the balls,
-                                        we convert them into world space positions and anchor them in place. From this
-                                        point forward, we no longer need to track their movement.</li>
-                                    <li><strong>Choose pocket:</strong> After the ball positions are anchored in world
-                                        space, the player is prompted to choose a pocket. This selection is used in the
-                                        upcoming shot prediction phase.</li>
-                                    <li><strong>Evaluating shot:</strong> With all three key positions (cue ball, target
-                                        ball, and selected pocket) defined, we use a combination of pool physics
-                                        calculations and Unity's physics engine to simulate the optimal cut shot.
-                                        Predicted paths are then visualized with guiding lines. </li>
-                                    <li><strong>Shot Prediction ready:</strong> Once the simulation completes, we
-                                        display the precise hit point on the target game ball where the cue ball should
-                                        make contact. This helps the player aim more effectively and increase the
-                                        chances of sinking the ball. </li>
+                                    <li><strong>Natural World Capture:</strong> A smooth and intuitive interaction
+                                        system allows users to pinch and drag using hand gestures to capture atomic
+                                        structure sketches from the real world using the Passthrough camera. This makes
+                                        the interaction feel natural, creative, and human-centered.</li>
+                                    <li><strong>Advanced Detection Algorithm:</strong> The app leverages multiple layers
+                                        of <a href="https://github.com/opencv/opencv">OpenCV</a> image processing to
+                                        accurately analyze atomic structure drawings.
+                                        Through several iterations, it extracts key visual cues — such as the number of
+                                        electrons — and determines which element the user has drawn.</li>
+                                    <li><strong>Dynamic 3D Structure Generation:</strong> Based on the detected electron
+                                        count, the system generates a 3D atomic model using rings and spheres. Each
+                                        component is placed and angled correctly to represent the element's atomic
+                                        structure in 3D space, offering a clear and interactive visualization.</li>
                                 </ul>
                                 <div class="project-grid">
                                     <div class="grid-card">
                                         <figure id="figure-grid" style="max-width:1080pxpx"
                                             class="w-richtext-align-fullwidth w-richtext-figure-type-image">
                                             <video class="portolio-webm-grid" autoplay muted loop playsinline
-                                                preload="auto" src="videos/interaction_1.webm" loading="lazy" alt="">
+                                                preload="auto" src="videos/capture.webm" loading="lazy" alt="">
                                             </video>
-                                            <figcaption>Step 1: Perform the gesture to initiate ball tracking. Using camera access, every 4th–5th frame is passed through the model to track 2D coordinates of the balls in real time.</figcaption>
+                                            <figcaption>Step 1:
+                                                Pinch to capture a hand-drawn atomic structure using the Passthrough
+                                                camera.
+                                            </figcaption>
                                         </figure>
                                     </div>
                                     <div class="grid-card">
                                         <figure id="figure-grid" style="max-width:1080pxpx"
                                             class="w-richtext-align-fullwidth w-richtext-figure-type-image">
                                             <video class="portolio-webm-grid" autoplay muted loop playsinline
-                                                preload="auto" src="videos/interaction_2.webm" loading="lazy" alt="">
+                                                preload="auto" src="videos/place_on_table.webm" loading="lazy" alt="">
                                             </video>
-                                            <figcaption>Step 2: Once ball tracking is stable, perform the gesture to localize and anchor the real pool table in world space.</figcaption>
+                                            <figcaption>Step 2: Image is processed to detect electrons, then dropped
+                                                onto a surface like table or floor.
+
+                                            </figcaption>
                                         </figure>
                                     </div>
                                 </div>
                                 <figure id="figure-grid" style="max-width:1080pxpx"
                                     class="w-richtext-align-fullwidth w-richtext-figure-type-image">
                                     <video class="portolio-webm-grid" autoplay muted loop playsinline preload="auto"
-                                        src="videos/shot_pridiction_720.webm" loading="lazy" alt="">
+                                        src="videos/combined_3d.webm" loading="lazy" alt="">
                                     </video>
-                                    <figcaption>Step 3: Select a pocket to start the shot prediction process, guided by visual line overlays on the real table.</figcaption>
+                                    <figcaption>Step 3: A 3D atomic model is generated based on the detected structure.
+                                    </figcaption>
                                 </figure>
 
-                               
+
 
                                 <!-- <figure style="max-width:1080pxpx"
                                     class="w-richtext-align-halfwidth w-richtext-figure-type-image">
@@ -153,9 +171,25 @@
                                             alt="PoolXR in action"></div>
                                     <figcaption>Earfasdeal-world setup.</figcaption>
                                 </figure> -->
-<br/><br/>
-                                <h4>Inside the Build: Behind the Scenes of PoolXR</h4>
-                                <p>Creating PoolXR was an exciting and rewarding journey — a mix of fun experimentation and deep learning. From the initial idea to training custom models and building the final experience, it took weeks of iteration, problem-solving, and hands-on development. This section offers a behind-the-scenes look at how it all came together — from early concepts to real-world testing.</p>
+                                <br /><br />
+                                <h4>Behind the AtomicXR Development</h4>
+                                <p>The concept for this project began back in 2021 as part of my final year college
+                                    project. At that time, I was experimenting with Augmented Reality on Android phones
+                                    — capturing atomic structure images and analyzing them with <a
+                                        href="https://github.com/opencv/opencv">OpenCV</a> to generate basic
+                                    3D models. (Link to old project)
+                                    <br /><br />
+                                    Later, when the Meta <a
+                                        href="https://developers.meta.com/horizon/documentation/unity/unity-pca-documentation"><a
+                                            href="https://developers.meta.com/horizon/documentation/unity/unity-pca-documentation">Passthrough
+                                            Camera API</a></a> was released, the idea sparked again. I
+                                    realized this could be the perfect opportunity to bring my old project into a more
+                                    immersive Mixed Reality environment.
+                                    <br /><br />
+                                    That’s how AtomicXR was borns — a fresh take on the original "Atomic" project, now
+                                    rebuilt with hand interactions, spatial understanding, and real-time 3D generation
+                                    in MR.
+                                </p>
                                 <!-- <ul role="list">
                                     <li><strong>Seamlessly blends real and virtual elements</strong> for an immersive experience.</li>
                                     <li>Maintains accurate spatial awareness for precise gameplay</li>
@@ -169,7 +203,8 @@
                                             <video class="portolio-webm-grid" autoplay muted loop playsinline
                                                 preload="auto" src="videos/poc_webm.webm" loading="lazy" alt="">
                                             </video>
-                                            <figcaption>Early proof of concept showcasing a custom-trained model tracking a table tennis ball in a basic real-world setup.</figcaption>
+                                            <figcaption>Early proof of concept showcasing a custom-trained model
+                                                tracking a table tennis ball in a basic real-world setup.</figcaption>
                                         </figure>
                                     </div>
                                     <div class="grid-card">
@@ -178,7 +213,9 @@
                                             <video class="portolio-webm-grid" autoplay muted loop playsinline
                                                 preload="auto" src="videos/shader.webm" loading="lazy" alt="">
                                             </video>
-                                            <figcaption>Custom shader experiment that creates a ripple effect on the table surface based on the cue ball’s world space position, anchored accurately to the physical table.
+                                            <figcaption>Custom shader experiment that creates a ripple effect on the
+                                                table surface based on the cue ball’s world space position, anchored
+                                                accurately to the physical table.
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -188,7 +225,8 @@
                                             <video class="portolio-webm-grid" autoplay muted loop playsinline
                                                 preload="auto" src="videos/data_label.webm" loading="lazy" alt="">
                                             </video>
-                                            <figcaption>Manually labeled 450+ images to train a custom object detection model for recognizing cue and game balls in various conditions.
+                                            <figcaption>Manually labeled 450+ images to train a custom object detection
+                                                model for recognizing cue and game balls in various conditions.
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -198,7 +236,10 @@
                                             <video class="portolio-webm-grid" autoplay muted loop playsinline
                                                 preload="auto" src="videos/opencv_720.webm" loading="lazy" alt="">
                                             </video>
-                                            <figcaption>The initial idea was to detect balls using OpenCV — here's the proof of concept. It worked to some extent, but didn’t feel reliable enough for consistent gameplay.
+                                            <figcaption>The initial idea was to detect balls using <a
+                                                    href="https://github.com/opencv/opencv">OpenCV</a> — here's the
+                                                proof of concept. It worked to some extent, but didn’t feel reliable
+                                                enough for consistent gameplay.
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -224,14 +265,24 @@
                                     <div><img src="images/61af34cbecba974e64a7a31a_pexels-rostislav-uzunov-5011647.jpg"
                                             loading="lazy" alt="Technical demonstration"></div>
                                 </figure> -->
-                                <br/>
+                                <br />
                                 <h5>Future Development</h5>
-                                <p>I'm continuously exploring new ways to push the boundaries of what's possible in
-                                    mixed reality gaming. Here's a glimpse of what's next on the roadmap for
-                                    <strong>PoolXR:</strong>
+                                <p>While the core concept of AtomicXR works well, I’ve identified a key limitation —
+                                    relying solely on OpenCV makes the detection process inconsistent, especially under
+                                    varying lighting conditions or with different drawing styles and image types.
+                                    <br /><br />
+                                    To make the system more scalable and robust, I plan to move from traditional image
+                                    processing to a custom-trained AI model. I'm also exploring the use of Gemini or
+                                    ChatGPT APIs for more intelligent analysis. This shift will not only improve
+                                    accuracy but could also provide real-time feedback or suggestions to correct the
+                                    drawing — adding a valuable learning layer to the experience.
+                                    </strong>
                                 </p>
-                                <ol start="" role="list">
-                                    <li><strong>Cue Stick Tracking:</strong> Adding support for real-time cue stick detection to improve aim tracking and shot direction prediction. Once the cue stick angle is detected accurately, we can also estimate shot success percentage based on alignment and positioning.</li>
+                                <!-- <ol start="" role="list">
+                                    <li><strong>Cue Stick Tracking:</strong> Adding support for real-time cue stick
+                                        detection to improve aim tracking and shot direction prediction. Once the cue
+                                        stick angle is detected accurately, we can also estimate shot success percentage
+                                        based on alignment and positioning.</li>
                                     <li><strong>Ball Selection Flow:</strong> Adding support for selecting the target
                                         ball before choosing a pocket, making the prediction flow more intuitive and
                                         user-controlled.</li>
@@ -244,7 +295,7 @@
                                     <li><strong>Multiplayer Integration:</strong> Introducing multiplayer capabilities
                                         to make the experience more immersive and enjoyable with friends or other
                                         players.</li>
-                                </ol>
+                                </ol> -->
                             </div>
                             <div class="article-about-author">
                                 <div class="flex mob-wrap">
