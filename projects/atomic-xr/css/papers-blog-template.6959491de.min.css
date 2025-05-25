@@ -10016,7 +10016,7 @@ em {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: end;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -10508,7 +10508,7 @@ em {
 
 .header-article-image-2 {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     -o-object-fit: cover;
     object-fit: cover
 }
