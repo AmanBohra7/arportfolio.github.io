@@ -338,7 +338,9 @@ html.w-mod-touch * {
     line-height: inherit;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 0
+    border-radius: 0;
+    margin-top:1rem;
+    position: absolute;
 }
 
 input.w-button {
