@@ -1007,6 +1007,7 @@ textarea.w-select {
     .w-col-small-12 {
         width: 100%
     }
+    
 }
 
 @media screen and (max-width:479px) {
@@ -12941,6 +12942,13 @@ em {
 @media screen and (max-width:991px) {
     body {
         font-size: 13px
+    }
+
+    .header-article-image-2 {
+        width: 95%;
+        /* height: 100%; */
+        -o-object-fit: cover;
+        object-fit: cover
     }
 
     .navbar {
