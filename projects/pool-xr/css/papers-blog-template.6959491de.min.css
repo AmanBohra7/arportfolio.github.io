@@ -5,6 +5,87 @@ html {
     height: 100%
 }
 
+/* custom code start */
+.custom-video-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background-color: #000;
+    color: #fff;
+    /* font-size: 16px; */
+    font-family: sans-serif;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 20px auto;
+    /* display: block; */
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-wrap:nowrap;
+}
+
+.custom-video-button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.custom-play-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.custom-video-button:hover .custom-play-icon {
+    transform: scale(1.1);
+}
+
+.custom-play-icon::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid #000;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+/* LinkedIn Icon Style */
+.custom-linkedin-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+    font-family: sans-serif;
+    transition: transform 0.3s ease;
+}
+
+
+#linkedIn-post-button{
+    margin: 0px;
+    text-decoration: none;
+}
+
+/* Optional: Slight hover effect */
+.custom-video-button:hover .custom-linkedin-icon {
+    transform: scale(1.1);
+}
+/* custom code end */
+
 .portolio-webm{
     width: 95%;
     aspect-ratio: 16/9;
@@ -12047,7 +12128,7 @@ em {
     overflow: hidden;
     width: 100%;
     padding-top: 5em;
-    padding-bottom: 5em;
+    /* padding-bottom: 5em; */
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -14083,7 +14164,7 @@ em {
     }
 
     .padding-inner {
-        padding-top: 6em;
+        /* padding-top: 6em; */
         padding-bottom: 6em
     }
 
