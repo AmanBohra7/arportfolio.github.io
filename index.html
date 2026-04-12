@@ -163,6 +163,19 @@
             visibility: hidden !important;
             opacity: 0 !important;
         }
+
+        .lecture-3d-image {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 18em;
+            margin-bottom: 1.5em;
+            -webkit-align-self: stretch;
+            -ms-flex-item-align: stretch;
+            -ms-grid-row-align: stretch;
+            align-self: stretch;
+            border-radius: 8px;
+        }
     </style>
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
@@ -285,7 +298,11 @@
                                         and I am an XR Developer with over 5 years of experience in building immersive
                                         AR/VR experiences that merge technology with storytelling to create impactful,
                                         interactive realities.
-                                    </p><a href="#about" class="button icon-down w-button">My work</a>
+                                    </p>
+                                    <div class="button-container" style="display: flex; gap: 1em; justify-content: flex-start; flex-wrap: wrap;">
+                                        <a href="#about" class="button icon-down w-button">My work</a>
+                                        <a href="#lectures" class="button icon-down w-button">My Lectures</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="flex-column-45 col-with-screens">
@@ -307,7 +324,7 @@
                 </div>
             </section>
             <section id="about" class="section">
-                <div class="padding-inner padding-bottom-12em">
+                <div class="padding-inner padding-bottom-4em">
                     <div class="container">
                         <h2 class="heading large center margin-bottom-1em">Featured projects</h2>
                         <div class="w-dyn-list">
@@ -573,6 +590,47 @@
                                             </div>
                                         </div>
                                     </a></div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="lectures" class="section">
+                <div class="padding-inner padding-bottom-12em">
+                    <div class="container">
+                        <h2 class="heading large center margin-bottom-1em">Featured lectures</h2>
+                        <div class="grid-2">
+                            <div class="grid-vertical-for-3d">
+                                <div class="lecture-3d-image">
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/093zWppZEpI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>
+                                </div>
+                                <div class="article-about">
+                                    <div class="article-title-wrap-2">
+                                        <div class="overflow-hidden">
+                                            <p class="post-title personal-style-title">PoolXR: Master every shot with YOLO & Unity Inference</p>
+                                        </div>
+                                    </div>
+                                    <div class="article-author">
+                                        <p class="paragraph extra-small margin-right-0-5em">by</p>
+                                        <p class="paragraph extra-small">Aman Bohra</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-vertical-for-3d">
+                                <div class="lecture-3d-image">
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/2dcDBbONZWI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>
+                                </div>
+                                <div class="article-about">
+                                    <div class="article-title-wrap-2">
+                                        <div class="overflow-hidden">
+                                            <p class="post-title personal-style-title">Learn about Co-Location Mixed Reality Games</p>
+                                        </div>
+                                    </div>
+                                    <div class="article-author">
+                                        <p class="paragraph extra-small margin-right-0-5em">by</p>
+                                        <p class="paragraph extra-small">Aman Bohra</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
